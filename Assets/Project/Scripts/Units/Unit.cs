@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Project.Scripts.ScriptableObject.UnitAbilities;
 using UnityEngine;
@@ -41,6 +42,11 @@ namespace Project.Scripts.Units
         
         internal void ChangeAttackSpeed(double attackSpeed) => this.attackSpeed += attackSpeed;
 
+        private void OnEnable()
+        {
+            StartCoroutine(StartAttack());
+        }
+
         internal void Init(ShapeParameters shape, ColorParameters color , SizeParameters size)
         {
             SetBaseCharacteristics();
@@ -62,6 +68,13 @@ namespace Project.Scripts.Units
             ChangeAttackSpeed(size.attackSpeed + shape.attackSpeed + color.attackSpeed);
 
             isInited = true;
+        }
+
+        IEnumerator StartAttack()
+        {
+            yield return new WaitUntil(() => GameManager.Battle);
+            
+            InvokeRepeating("PerformAttack", (float)attackSpeed, (float)attackSpeed);
         }
 
         void FixedUpdate()

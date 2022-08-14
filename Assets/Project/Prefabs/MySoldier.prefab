@@ -47,10 +47,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69eb99850786eee46bf85340a54133d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _attackPoints: 0
-  _healthPoints: 0
-  _movementSpeed: 0
-  _attackSpeed: 0
+  attackPoints: 0
+  healthPoints: 0
+  movementSpeed: 0
+  attackSpeed: 0
   enemies: []
   isAttack: 0
   isInited: 0
@@ -85,7 +85,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 84
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
 --- !u!135 &502175387269912629
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -95,7 +95,7 @@ SphereCollider:
   m_GameObject: {fileID: 2052530916666587926}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.91
   m_Center: {x: 0, y: 0, z: 0}

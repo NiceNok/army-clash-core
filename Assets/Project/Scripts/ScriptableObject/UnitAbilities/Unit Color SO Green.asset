@@ -17,6 +17,6 @@ MonoBehaviour:
   coloredMaterialEnemy: {fileID: 2100000, guid: b316cefba4a11e145887ab9a81a86f20,
     type: 2}
   attackPoints: 20
-  healthPoints: 100
-  movementSpeed: 0
-  attackSpeed: -5
+  healthPoints: -50
+  movementSpeed: -5
+  attackSpeed: 0
