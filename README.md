@@ -2,7 +2,7 @@
 ____
 ## About The Project
 At the core of the engine I used structured code that can be extended by other programmers without big problems. The main work was carried out with the physics setup 
-for the army. 
+for the army. After testing, I decided to change "Enemy detection" from collider collisions to calculate the distance between units. This increased performance and simplified the code.
 
 The design pattern **Object Pool** was chosen to improve performance, also I minimized use of Update functions. At the current point, the profiler 
 showed good results. My main design patterns for working with code and Unity environment are **MVC** and **ECS**. 
