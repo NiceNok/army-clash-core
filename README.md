@@ -1,7 +1,7 @@
 # Army Clash Core
 ____
 ## About The Project
-At the core of the engine I used structured code that can be extended by other programmers without big problems. The main work was carried out with the physics setup 
+At the core of the engine I used structured code that can be extended by other programmers without any problems. The main work was carried out with the physics setup 
 for the army. After testing, I decided to change "Enemy detection" from collider collisions to calculate the distance between units. This increased performance and simplified the code.
 
 The design pattern **Object Pool** was chosen to improve performance, also I minimized use of Update functions. At the current point, the profiler 
